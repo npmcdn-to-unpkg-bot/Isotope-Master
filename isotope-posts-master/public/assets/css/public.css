@@ -1,0 +1,311 @@
+/* This stylesheet is used to style the public-facing components of the plugin. */
+
+/* START: Recommended Isotope styles */
+
+/* Isotope filtering */
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Isotope CSS3 transitions */
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/* disabling Isotope CSS3 transitions */
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* END: Recommended Isotope styles */
+
+/* Plugin-specific styles */
+
+#filters {
+	list-style: none;
+   margin: 0.5em 0 2em 0;
+   display: inline-block;
+}
+
+#filters li {
+	float: left;
+  /*
+	border: 1px solid #ededed;
+  */
+	/*margin: 0 .5em 1em 0;*/
+}
+
+#filters li a {
+	text-decoration: none;
+	padding: .5em 1em;
+   display: block;
+}
+
+.iso-container {
+  max-width: 1200px;
+  clear: both;
+}
+
+#iso-loop {
+   display: none;
+   list-style: none;
+   margin: 0;
+}
+
+#iso-loop li {
+   max-width: 1200px;
+
+   margin: 0 2.5% 2.5% 0;
+   -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#iso-loop li: after{
+  display: block;
+  clear: both;
+}
+
+h2.iso-title a {
+	text-decoration: none;
+}
+
+.iso-thumb {
+	width: auto;
+	margin-bottom: .5em;
+}
+
+.iso-thumb img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.more-iso-posts {
+   display: none;
+}
+
+.iso-posts-loading {
+   margin: 0 auto;
+   text-align: center;
+}
+
+.iso-posts-loading img {
+   display: block;
+   margin: 0 auto;
+   box-shadow: none !important;
+   border: 0;
+}
+
+.iso-title{
+  color: #222;
+  height: 120px;
+  overflow-y:scroll;
+}
+
+.grid-item{
+  float: center;
+  width: 150px;
+  height: 150px;
+  
+  background: #e96656;
+
+  /*
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.7);
+  */
+}
+
+.iso-title{
+  cursor: pointer;
+}
+/*
+.grid-item:hover {
+  background: #8CF;
+  cursor: pointer;
+}
+*/
+
+.grid-item.gigante {
+  width: 470px;
+  height: 470px;
+  background: #fafafa !important;
+  color: #222 !important;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.answer{
+  height: 200px;
+  line-height:3em;
+  overflow-y:scroll;
+  padding:5px;
+  
+  /*background:rgba(255,255,255,0.3);*/
+}
+
+@media screen and (max-width: 520px) {
+  
+
+  .grid-item.gigante {
+  width:95%;
+  
+  background: #fafafa !important;
+  color: #222 !important;
+  }
+
+  #filters li button{
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  font-size: 10px;
+  }
+
+}
+
+
+
+/*ADDED*/
+
+.popup {
+    width:100%;
+    height:100%;
+    display:none;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.3);
+}
+ 
+
+.popup-inner {
+    max-width:700px;
+    width:90%;
+
+    padding:40px;
+    position:absolute;
+    top:55%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background:#fff;
+}
+ 
+
+.popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+}
+ 
+.popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+.iso-title{
+  margin-left: 5px;
+}
+
+.mix{
+  margin:5px !important;  
+}
+
+.inline_button { 
+    display: inline-block; 
+    border: 1px solid red; 
+    margin-bottom: 10px;
+}
+
+.invalid input:required:invalid{
+  background: #BE4C54;
+}
+.invalid textarea:required:invalid{
+  background: #BE4C54;
+}
+
+/* Glow */
+/*.hvr-glow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}*/
+.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+}
+
+
+
