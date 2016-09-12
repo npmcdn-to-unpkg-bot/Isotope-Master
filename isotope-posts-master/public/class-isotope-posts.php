@@ -287,7 +287,7 @@ class Isotope_Posts {
 		wp_enqueue_script( $this->plugin_slug . '-plugin-script', plugins_url( 'assets/js/public.js', __FILE__ ), array( 'jquery' ), self::VERSION );
 		wp_enqueue_script( $this->plugin_slug . '-packery-script', plugins_url( 'assets/js/packery.pkgd.min.js', __FILE__ ), array( 'jquery' ), '2.1.1');
 		wp_enqueue_script( $this->plugin_slug . '-packery-layout-script', plugins_url( 'assets/js/packery-mode.pkgd.js', __FILE__ ), array( 'jquery' ), '2.0');
-		// "https://npmcdn.com/packery@2.1/dist/packery.pkgd.min.js"
+		// "https://unpkg.com/packery@2.1/dist/packery.pkgd.min.js"
 		// wp_enqueue_script( $this->plugin_slug . '-perfectmasonry-script', plugins_url( 'assets/js/jquery.isotope.perfectmasonry.js', __FILE__ ), array(), '1.0' );
 
 		wp_localize_script( $this->plugin_slug . '-plugin-script', 'iso_vars', array(
